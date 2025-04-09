@@ -1,0 +1,32 @@
+"use client";
+import BeatPlayer from "./components/BeatPlayer.jsx";
+
+export default function Home() {
+  return (
+    <>
+      <div className="p-8">
+        <h1 className="mb-8 text-3xl text-center font-bold underline">
+          Y2KDOM - BEATS FROM THE FUTURE
+        </h1>
+      </div>
+      <div className="grid grid-cols-3 gap-8">
+        <BeatPlayer id={0} name={"Crash"}></BeatPlayer>
+        <BeatPlayer id={1} name={"Big Body"}></BeatPlayer>
+        <BeatPlayer id={2} name={"Diva"}></BeatPlayer>
+        <BeatPlayer id={3} name={"Foreign"}></BeatPlayer>
+        <BeatPlayer id={4} name={"Crash"}></BeatPlayer>
+        <BeatPlayer id={5} name={"Big Body"}></BeatPlayer>
+        <BeatPlayer id={6} name={"Diva"}></BeatPlayer>
+        <BeatPlayer id={7} name={"Foreign"}></BeatPlayer>
+        <BeatPlayer id={8} name={"Crash"}></BeatPlayer>
+        <BeatPlayer id={9} name={"Big Body"}></BeatPlayer>
+        <BeatPlayer id={10} name={"Diva"}></BeatPlayer>
+        <BeatPlayer id={11} name={"Foreign"}></BeatPlayer>
+        <BeatPlayer id={12} name={"Crash"}></BeatPlayer>
+        <BeatPlayer id={13} name={"Big Body"}></BeatPlayer>
+        <BeatPlayer id={14} name={"Diva"}></BeatPlayer>
+        <BeatPlayer id={15} name={"Foreign"}></BeatPlayer>
+      </div>
+    </>
+  );
+}

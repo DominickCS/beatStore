@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* * { */
+/*   border: solid red 2px; */
+/* } */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.beatImg {
+  border-radius: 16px;
+  margin: 0 auto;
+  min-height: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.buyBtn {
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: large;
+  padding: 4px 6px;
+  color: #fff !important;
+  transition: 0.5s;
+  padding: 0;
+}
+
+.buyBtn::after {
+  max-width: 100%;
+  height: 2px;
+  display: block;
+  content: "";
+  background: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
+  opacity: 1;
+  margin-bottom: -6px;
+  margin-top: 1px;
+  padding: 0;
+}
+
+.buyBtnContainer {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.buyBtnContainer:hover {
+  animation-name: scrollRainbow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transition: 1s;
+}
+
+@keyframes scrollRainbow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
