@@ -62,7 +62,9 @@ export default class BeatPlayer extends Component {
               height={300}
               alt="album art for the selected beat"
               className={
-                playing ? "shadow-2xl shadow-white beatImg" : "beatImg"
+                playing
+                  ? "shadow-2xl shadow-blue-400/35 border border-white beatImg"
+                  : "beatImg"
               }
             />
             <p className="text-2xl text-center mt-4">{this.props.name}</p>

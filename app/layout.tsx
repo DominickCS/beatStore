@@ -24,8 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-900
+  [&::-webkit-scrollbar-thumb]:bg-white [&::-webkit-scrollbar-thumb]:rounded-full ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

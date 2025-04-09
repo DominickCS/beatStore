@@ -1,15 +1,22 @@
 "use client";
+import Image from "next/image.js";
 import BeatPlayer from "./components/BeatPlayer.jsx";
 
 export default function Home() {
   return (
     <>
-      <div className="p-8">
-        <h1 className="mb-8 text-3xl text-center font-bold underline">
-          Y2KDOM - BEATS FROM THE FUTURE
-        </h1>
+      <div className="m-16">
+        <a href="/">
+          <Image
+            className="logo"
+            src="/img/logo.png"
+            alt="logo for Y2K DOM"
+            width={300}
+            height={300}
+          ></Image>
+        </a>
       </div>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-8">
         <BeatPlayer id={0} name={"CRASH"}></BeatPlayer>
         <BeatPlayer id={1} name={"BIG BODY"}></BeatPlayer>
         <BeatPlayer id={2} name={"DIVA"}></BeatPlayer>
