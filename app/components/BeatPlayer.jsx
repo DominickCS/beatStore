@@ -51,8 +51,8 @@ export default class BeatPlayer extends Component {
           <div
             className={
               playing
-                ? "opacity-100 scale-120 p-8 duration-300 "
-                : "opacity-30 hover:opacity-70 duration-300"
+                ? "player opacity-100 duration-100 "
+                : "player duration-200"
             }
           >
             <Image
@@ -63,23 +63,26 @@ export default class BeatPlayer extends Component {
               alt="album art for the selected beat"
               className={
                 playing
-                  ? "shadow-2xl shadow-blue-400/35 border border-white beatImg"
-                  : "beatImg"
+                  ? "m-8 scale-120 animate-pulse shadow-2xl shadow-blue-500/70 border border-white beatImg duration-300"
+                  : "beatImg opacity-20 hover:opacity-80 duration-300"
               }
             />
-            <p className="text-2xl text-center mt-4">{this.props.name}</p>
+            <p className="text-2xl text-center mt-12">
+              <em>{this.props.name}</em>
+            </p>
             <ReactPlayer
               ref={this.classInstance}
               playing={playing}
               height={1}
+              width={1}
               url={`/test${this.props.id}.mp3`}
               id={this.props.id}
               onEnded={() => this.setState({ playing: false })}
               onError={() => this.setState({ playing: false })}
             />
-          </div>
-          <div className="buyBtnContainer">
-            <button className="buyBtn">BUY THIS BEAT</button>
+            <div className="buyBtnContainer">
+              <button className="buyBtn">BUY THIS BEAT</button>
+            </div>
           </div>
         </div>
       </>

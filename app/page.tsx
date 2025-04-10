@@ -5,18 +5,18 @@ import BeatPlayer from "./components/BeatPlayer.jsx";
 export default function Home() {
   return (
     <>
-      <div className="m-16">
-        <a href="/">
+      <div>
+        <a href="/" className="logoLink">
           <Image
             className="logo"
             src="/img/logo.png"
             alt="logo for Y2K DOM"
-            width={300}
-            height={300}
+            width={280}
+            height={280}
           ></Image>
         </a>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 items-center">
         <BeatPlayer id={0} name={"CRASH"}></BeatPlayer>
         <BeatPlayer id={1} name={"BIG BODY"}></BeatPlayer>
         <BeatPlayer id={2} name={"DIVA"}></BeatPlayer>
@@ -33,6 +33,11 @@ export default function Home() {
         <BeatPlayer id={13} name={"POLYMORPH"}></BeatPlayer>
         <BeatPlayer id={14} name={"ERA"}></BeatPlayer>
         <BeatPlayer id={15} name={"DON'T MATTER"}></BeatPlayer>
+      </div>
+      <div id="footer">
+        <footer>
+          Copyright© 2025 <em>Y2KDOM</em>
+        </footer>
       </div>
     </>
   );

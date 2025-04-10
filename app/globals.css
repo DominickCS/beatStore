@@ -8,27 +8,29 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-recursive);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000;
+    /* --background: linear-gradient( */
+    /*   180deg, */
+    /*   #6482ad 0%, */
+    /*   #7fa1c3 33%, */
+    /*   #e2dad6 66%, */
+    /*   #f5eded 100% */
+    /* ); */
+    --foreground: #fff;
   }
-}
-
-/* * { */
-/*   border: solid red 2px; */
-/* } */
-
-html {
 }
 
 .logo {
   margin: 0 auto;
   border-radius: 100%;
+  animation-name: logoBounce;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
 }
 
 body {
@@ -36,15 +38,16 @@ body {
   color: var(--foreground);
   max-width: 100vw;
   overflow-x: hidden;
+  font-weight: bold;
 }
 
 .beatImg {
   border-radius: 16px;
   margin: 0 auto;
-  min-height: 300px;
-  min-width: 300px;
-  max-width: 300px;
-  max-height: 300px;
+  min-height: 260px;
+  min-width: 260px;
+  max-width: 260px;
+  max-height: 260px;
 }
 
 .buyBtn {
@@ -70,8 +73,8 @@ body {
 }
 
 .buyBtnContainer {
+  margin-bottom: 2rem;
   margin-top: 1rem;
-  margin-bottom: 4rem;
   text-align: center;
 }
 
@@ -80,6 +83,24 @@ body {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   transition: 1s;
+}
+
+.player {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.logoLink {
+  display: block;
+  width: 300;
+  margin: 0 auto;
+}
+
+#footer {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
 }
 
 @keyframes scrollRainbow {
@@ -92,5 +113,18 @@ body {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes logoBounce {
+  0% {
+    transform: scale(0.5) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.35) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
   }
 }
