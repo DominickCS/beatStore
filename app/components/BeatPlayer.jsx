@@ -64,7 +64,7 @@ export default class BeatPlayer extends Component {
               className={
                 playing
                   ? "m-8 scale-120 animate-pulse shadow-2xl shadow-blue-500/70 border border-white beatImg duration-300"
-                  : "beatImg opacity-20 hover:opacity-80 duration-300"
+                  : "beatImg opacity-20 hover:opacity-80 hover:cursor-pointer duration-300"
               }
             />
             <p className="text-2xl text-center mt-12">
