@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## TODO
+
+- Add new music to component creation method
+- File name standardization method
+- Add download functionality
+- Stripe integration
+- Dynamic Component creation method via first todo item
+
 ## Getting Started
 
 First, run the development server:
